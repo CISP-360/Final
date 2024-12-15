@@ -1,0 +1,76 @@
+#include <sstream> // provides facilities for input and output using string streams.
+#include <iostream> // input output streams
+#include <fstream> // file streams
+#include <string> // use strings
+#include <iomanip> // set width, precision of decimals
+#include <cctype> // is uppercase, is digit, is a character
+#include <bits/stdc++.h>
+
+/*
+Emergency Decision Maker 
+*/
+
+// Function prototypes relating to the actual exicution of the program
+// presents a menu
+void aircraftChoiceMenu();
+// 
+char inputChoice();
+void displayMenu1();
+char inputYNChoice();
+void display(std::string message);
+void whatsWrong(char issue);
+// tell the user to switch radios
+void comFailure();
+
+// every function relating to and used in the engineFailure function,
+// descriptions of each definition are found in the functions file
+void engineFailure();
+void checkAirborn(char &answer);
+void checkElectrical(char &answer);
+void checkEngine(char &answer);
+void checkTemperature(char &answer);
+void checkMountains(char &answer);
+void checkWater(char &answer);
+void checkNight(char &answer);
+void likeWhatYouSee(char &answer);
+
+// ask the user how much ice is on their craft, and respond with what they 
+// need to do
+void inflightIcing(int iceMM);
+int iceAmount();
+void iceInstruction(int iceMM);
+
+// exit out of the program
+void quit();
+
+// main function
+void aircraftChoiceMenu();
+
+// Function definitions
+//struct FlightInfo;
+void flightStatusChoice();
+void displayMenu2();
+void openFile(const std::string& fileName, std::ifstream& inFile);
+std::string readFile(std::ifstream& inFile);
+void extractFile(const std::string& line);
+int calculateDelay(int scheduledTime, int actualTime);
+
+// main function
+void flightStatusChoice();
+
+
+
+// Constant variables
+const int ROWS = 7;
+const int COLUMNS = 4;
+
+void initializeSeats(char seats[ROWS][COLUMNS]);
+void displaySeats(char seats[ROWS][COLUMNS]);
+bool reserveSeat(char seats[ROWS][COLUMNS], int row, int column);
+bool cancelSeat(char seats[ROWS][COLUMNS], int row, int column);
+bool isValidInput(const std::string& input, int& row, int& column);
+void displayMenu3();
+int seatReservationMain();
+
+// main Function
+int seatReservationMain();
