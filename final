@@ -1,0 +1,39 @@
+#include <iostream>
+#include "AirportApplicationHeader.h"
+
+int main()
+{
+	char midtermChoice;
+	do {
+	std::cout <<  "Emergency Navigation            - E" << "\n"
+	          <<  "Flight Status Report            - R" << "\n"
+	          <<  "Seat Reservation / Cancellation - S" << "\n"
+	          <<  "Movie Selection                 - M" << "\n"
+	          <<  "Exit                            - Q" << "\n"
+	          << "answer: ";
+	std::cin >> midtermChoice;
+	midtermChoice = toupper(midtermChoice);
+	switch(midtermChoice) {
+	case 'E':
+	aircraftChoiceMenu();
+	break;
+	case 'R':
+	flightStatusChoice();
+	break;
+	case 'S':
+	seatReservationMain();
+	break;
+	case 'M':
+    std::cout << "Movie Selector";
+	break;
+	case 'Q':
+	std::cout << "byebye!";
+	break;
+
+	}
+	} while (midtermChoice != 'Q' && midtermChoice != 'q');
+}
+
+
+
+
